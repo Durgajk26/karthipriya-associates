@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthipriya Associates — Property Consultants, Chennai</title>
+<meta name="description" content="Karthipriya Associates — property consultancy, registration, document writing and documentation services in Chennai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2620;
+    --ink-soft:#3C463F;
+    --paper:#EDE7D8;
+    --paper-2:#E3DBC6;
+    --green:#204D3B;
+    --green-deep:#153529;
+    --brass:#A9822E;
+    --brass-light:#C9A24E;
+    --line:#C6BC9F;
+    --white:#FBF9F3;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--green-deep);
+    margin:0;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  @media (min-width:900px){ .wrap{padding:0 48px;} }
+
+  /* subtle perforated paper edge used as a divider */
+  .perf{
+    height:14px;
+    background-image: radial-gradient(circle, var(--paper) 3px, transparent 3.2px);
+    background-size: 18px 18px;
+    background-position: center;
+    background-color: var(--green-deep);
+  }
+  .perf.flip{ transform: rotate(180deg); }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--green-deep);
+    color:var(--paper);
+    padding:20px 0;
+  }
+  .header-row{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:14px;
+  }
+  .seal{
+    width:46px; height:46px; border-radius:50%;
+    border:1.5px solid var(--brass-light);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-size:17px; color:var(--brass-light);
+    flex-shrink:0;
+  }
+  .brand-text .name{
+    font-family:'Fraunces', serif; font-size:19px; letter-spacing:0.2px; color:var(--white);
+  }
+  .brand-text .tag{
+    font-size:12.5px; color:#B9C4BC; margin-top:2px;
+  }
+  nav{display:none; gap:28px; font-size:14.5px;}
+  nav a{ text-decoration:none; color:#D8DED9; }
+  nav a:hover{ color:var(--brass-light); }
+  @media (min-width:760px){ nav{ display:flex; } }
+  .call-btn{
+    background:var(--brass);
+    color:var(--green-deep);
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:2px;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .call-btn:hover{ background:var(--brass-light); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:72px 0 56px;
+    position:relative;
+  }
+  .hero-file{
+    background:var(--white);
+    border:1px solid var(--line);
+    padding:44px 32px;
+    position:relative;
+  }
+  .hero-file::before{
+    content:"";
+    position:absolute; top:14px; left:14px; right:-14px; bottom:-14px;
+    border:1px solid var(--line);
+    z-index:-1;
+  }
+  @media (min-width:760px){ .hero-file{ padding:64px 64px 56px; } }
+  .file-label{
+    font-size:12.5px; letter-spacing:0.5px; color:var(--brass);
+    border-bottom:1px solid var(--line);
+    padding-bottom:14px; margin-bottom:26px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+  .hero h1{
+    font-size:clamp(30px, 4.6vw, 48px);
+    line-height:1.18;
+    max-width:15ch;
+  }
+  .hero p.lead{
+    margin-top:22px;
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:52ch;
+  }
+  .hero-actions{
+    margin-top:32px;
+    display:flex; flex-wrap:wrap; gap:14px;
+  }
+  .btn-primary{
+    background:var(--green);
+    color:var(--white);
+    text-decoration:none;
+    padding:13px 26px;
+    font-size:14.5px;
+    font-weight:600;
+    border-radius:2px;
+  }
+  .btn-primary:hover{ background:var(--green-deep); }
+  .btn-secondary{
+    border:1px solid var(--ink);
+    color:var(--ink);
+    text-decoration:none;
+    padding:13px 26px;
+    font-size:14.5px;
+    font-weight:600;
+    border-radius:2px;
+  }
+  .btn-secondary:hover{ background:var(--ink); color:var(--white); }
+
+  /* ---------- Section heading ---------- */
+  .section{ padding:64px 0; }
+  .section-head{
+    display:flex; align-items:baseline; gap:18px; margin-bottom:36px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:16px;
+  }
+  .section-head .no{
+    font-family:'Fraunces', serif; font-size:14px; color:var(--brass);
+  }
+  .section-head h2{ font-size:clamp(24px,3vw,32px); }
+
+  /* ---------- Services ledger ---------- */
+  .ledger{ border-top:1px solid var(--ink); }
+  .entry{
+    display:grid;
+    grid-template-columns:52px 1fr;
+    gap:20px;
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  @media (min-width:760px){
+    .entry{ grid-template-columns:64px 220px 1fr; align-items:start; }
+  }
+  .entry .idx{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    color:var(--brass);
+  }
+  .entry h3{ font-size:20px; color:var(--ink); font-weight:600; }
+  .entry p{ margin:8px 0 0; color:var(--ink-soft); font-size:15px; max-width:56ch; }
+  @media (min-width:760px){ .entry p{ margin-top:0; } }
+
+  /* ---------- Why us ---------- */
+  .why{
+    background:var(--green-deep);
+    color:var(--paper);
+  }
+  .why .section-head{ border-color:#3A4B42; }
+  .why .section-head h2{ color:var(--white); }
+  .why .section-head .no{ color:var(--brass-light); }
+  .why-grid{
+    display:grid; gap:32px;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:700px){ .why-grid{ grid-template-columns:repeat(3,1fr); } }
+  .why-item .mark{
+    font-family:'Fraunces', serif; color:var(--brass-light); font-size:26px; margin-bottom:10px; display:block;
+  }
+  .why-item h3{ color:var(--white); font-size:17px; font-weight:500; margin-bottom:8px;}
+  .why-item p{ color:#C4CCC6; font-size:14.5px; margin:0; }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{
+    display:grid; gap:36px; grid-template-columns:1fr;
+  }
+  @media (min-width:860px){ .contact-grid{ grid-template-columns:1fr 1fr; } }
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    padding:30px;
+  }
+  .card h3{ font-size:18px; margin-bottom:18px; }
+  .detail-row{
+    display:flex; gap:14px; padding:12px 0; border-bottom:1px solid var(--paper-2);
+    font-size:14.5px;
+  }
+  .detail-row:last-child{ border-bottom:none; }
+  .detail-row .label{ color:var(--brass); min-width:78px; font-weight:600; }
+  .detail-row a{ text-decoration:none; color:var(--ink); }
+  .detail-row a:hover{ color:var(--green); }
+
+  form{ display:flex; flex-direction:column; gap:14px; }
+  label{ font-size:13px; color:var(--ink-soft); }
+  input, select, textarea{
+    font-family:'Public Sans', sans-serif;
+    font-size:15px;
+    padding:11px 12px;
+    border:1px solid var(--line);
+    background:var(--paper);
+    color:var(--ink);
+    border-radius:2px;
+    width:100%;
+  }
+  input:focus, select:focus, textarea:focus{
+    outline:2px solid var(--green);
+    outline-offset:1px;
+  }
+  textarea{ min-height:96px; resize:vertical; }
+  .submit-btn{
+    align-self:flex-start;
+    background:var(--brass);
+    color:var(--green-deep);
+    border:none;
+    padding:13px 26px;
+    font-size:14.5px;
+    font-weight:700;
+    border-radius:2px;
+    cursor:pointer;
+    font-family:'Public Sans', sans-serif;
+  }
+  .submit-btn:hover{ background:var(--brass-light); }
+  .form-note{ font-size:12.5px; color:var(--ink-soft); margin-top:-2px; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--green-deep);
+    color:#9FAFA6;
+    padding:32px 0;
+    font-size:13px;
+  }
+  .footer-row{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
+    align-items:center;
+  }
+  footer a{ color:#C9A24E; text-decoration:none; }
+
+  /* accessibility: visible focus for keyboard users */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--brass);
+    outline-offset:2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">
+      <div class="seal">KP</div>
+      <div class="brand-text">
+        <div class="name">Karthipriya Associates</div>
+        <div class="tag">Property Consultants · Chennai</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call-btn" href="tel:+919841097457">Call 98410 97457</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-file">
+      <div class="file-label">
+        <span>FILE NO. KPA / 2026</span>
+        <span>PROPERTY CONSULTANCY &amp; DOCUMENTATION</span>
+      </div>
+      <h1>Every property has a paper trail. We make sure yours is written right.</h1>
+      <p class="lead">Karthipriya Associates guides buyers, sellers and owners through consultancy, registration and documentation — so nothing gets held up on the wrong page.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Send an enquiry</a>
+        <a class="btn-secondary" href="tel:+919841097457">Call for a consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="perf"></div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="no">§1</span>
+      <h2>Services</h2>
+    </div>
+    <div class="ledger">
+      <div class="entry">
+        <div class="idx">01</div>
+        <h3>Property Consultancy</h3>
+        <p>Independent guidance on buying and selling property, leasing, and shortlisting the right option — checking that a deal makes sense before you commit.</p>
+      </div>
+      <div class="entry">
+        <div class="idx">02</div>
+        <h3>Property Registration</h3>
+        <p>End-to-end handling of the registration process at the Sub-Registrar's office, including stamp duty calculation and appointment scheduling.</p>
+      </div>
+      <div class="entry">
+        <div class="idx">03</div>
+        <h3>Document Writing</h3>
+        <p>Drafting of sale deeds, lease agreements, gift deeds, power of attorney and other property documents, prepared to be legally sound and ready to register.</p>
+      </div>
+      <div class="entry">
+        <div class="idx">04</div>
+        <h3>Documentation Services</h3>
+        <p>Title verification, encumbrance certificates, patta and chitta transfers, and organising the paperwork trail a property needs from start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap section">
+    <div class="section-head">
+      <span class="no">§2</span>
+      <h2>Why work with us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="mark">✓</span>
+        <h3>One point of contact</h3>
+        <p>From the first consultation to the final registered document, you deal with the same team throughout.</p>
+      </div>
+      <div class="why-item">
+        <span class="mark">✓</span>
+        <h3>Local knowledge</h3>
+        <p>Based in Royapettah, Chennai, with working familiarity of local Sub-Registrar offices and processes.</p>
+      </div>
+      <div class="why-item">
+        <span class="mark">✓</span>
+        <h3>Paperwork done properly</h3>
+        <p>Documents are prepared carefully the first time, to avoid delays and rejections later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="perf flip"></div>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="no">§3</span>
+      <h2>Get in touch</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Contact details</h3>
+        <div class="detail-row">
+          <span class="label">Proprietor</span>
+          <span>D. Muthukrishnan, Property Consultant</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Phone</span>
+          <span>
+            <a href="tel:+914428484857">044‑2848 4857</a> ·
+            <a href="tel:+919841097457">98410 97457</a> ·
+            <a href="tel:+918939794546">89397 94546</a> ·
+            <a href="tel:+919363190945">93631 90945</a>
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Email</span>
+          <span>
+            <a href="mailto:muthukrishnan531@gmail.com">muthukrishnan531@gmail.com</a> ·
+            <a href="mailto:karthepriyaa@gmail.com">karthepriyaa@gmail.com</a>
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Office 1</span>
+          <span>No. 10, "Karnani Archives", No. 154, Bharathi Salai (Pycrofts Road), Royapettah, Chennai&nbsp;600014 <em>(Opp. District Registrar Office, Central Chennai)</em></span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Office 2</span>
+          <span>Flat No. 5, Golf Arcade, Door No. 27/12, Veterinary Hospital Road, Nandanam, Chennai&nbsp;600035</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Map</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Karnani+Archives+No+154+Pycrofts+Road+Bharathi+Salai+Royapettah+Chennai+600014" target="_blank" rel="noopener">Directions to Royapettah office</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Send an enquiry</h3>
+        <form id="enquiry-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div>
+            <label for="service">What do you need help with?</label>
+            <select id="service" name="service">
+              <option>Property Consultancy</option>
+              <option>Property Registration</option>
+              <option>Document Writing</option>
+              <option>Documentation Services</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about your property or requirement"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send enquiry</button>
+          <p class="form-note">This opens your email app with the details filled in, addressed to Karthipriya Associates.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Karthipriya Associates, Chennai · D. Muthukrishnan</span>
+    <a href="tel:+919841097457">98410 97457</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('enquiry-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var service = document.getElementById('service').value;
+    var message = document.getElementById('message').value.trim();
+
+    var subject = encodeURIComponent('Enquiry: ' + service + ' — ' + name);
+    var body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Phone: ' + phone + '\n' +
+      'Service required: ' + service + '\n\n' +
+      'Message:\n' + (message || '(none provided)')
+    );
+    window.location.href = 'mailto:muthukrishnan531@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
