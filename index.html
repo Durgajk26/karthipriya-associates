@@ -92,6 +92,21 @@
     white-space:nowrap;
   }
   .call-btn:hover{ background:var(--brass-light); }
+  .header-actions{ display:flex; align-items:center; gap:10px; }
+  .whatsapp-btn{
+    display:flex; align-items:center; gap:7px;
+    background:transparent;
+    border:1px solid #3E5348;
+    color:var(--paper);
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:2px;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .whatsapp-btn:hover{ border-color:var(--brass-light); color:var(--brass-light); }
+  .whatsapp-btn svg{ width:16px; height:16px; flex-shrink:0; }
 
   /* ---------- Hero ---------- */
   .hero{
@@ -297,7 +312,13 @@
       <a href="#why">Why us</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="call-btn" href="tel:+919841097457">Call 98410 97457</a>
+    <div class="header-actions">
+      <a class="whatsapp-btn" href="https://wa.me/918939794546?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20property%20matter." target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.383 3 4 8.373 4 14.976c0 2.37.693 4.58 1.885 6.438L4 29l7.79-1.837a12.99 12.99 0 0 0 4.211.703h.005c6.618 0 12-5.373 12-11.976C28.006 8.373 22.62 3 16.001 3Zm7.104 17.02c-.297.83-1.474 1.522-2.404 1.72-.638.136-1.472.244-4.28-.918-3.594-1.487-5.91-5.132-6.09-5.37-.178-.238-1.457-1.938-1.457-3.695s.906-2.618 1.228-2.977c.297-.33.647-.412.863-.412.216 0 .432.002.62.011.198.01.464-.075.727.554.297.712.966 2.457 1.05 2.635.086.178.144.386.03.624-.114.238-.172.386-.34.594-.171.208-.36.464-.514.624-.172.178-.352.372-.152.73.198.356.883 1.457 1.897 2.36 1.303 1.16 2.401 1.52 2.759 1.692.36.172.57.148.78-.09.216-.238.925-1.078 1.172-1.448.246-.372.494-.31.83-.184.34.124 2.155 1.017 2.526 1.202.372.184.618.276.71.43.093.156.093.888-.204 1.718Z"/></svg>
+        WhatsApp
+      </a>
+      <a class="call-btn" href="tel:+919841097457">Call 98410 97457</a>
+    </div>
   </div>
 </header>
 
@@ -418,7 +439,15 @@
         </div>
         <div class="detail-row">
           <span class="label">Map</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=Karnani+Archives+No+154+Pycrofts+Road+Bharathi+Salai+Royapettah+Chennai+600014" target="_blank" rel="noopener">Directions to Royapettah office</a>
+          <span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Karnani+Archives+No+154+Pycrofts+Road+Bharathi+Salai+Royapettah+Chennai+600014" target="_blank" rel="noopener">Directions to Royapettah office</a>
+            ·
+            <a href="https://www.google.com/maps/search/?api=1&query=Golf+Arcade+27%2F12+Veterinary+Hospital+Road+Nandanam+Chennai+600035" target="_blank" rel="noopener">Directions to Nandanam office</a>
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="label">WhatsApp</span>
+          <a href="https://wa.me/918939794546?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20property%20matter." target="_blank" rel="noopener">Chat on WhatsApp</a>
         </div>
       </div>
       <div class="card">
