@@ -95,35 +95,38 @@
     .brand-text .name{ font-size:19px; }
     .brand-text .tag{ font-size:12.5px; }
   }
+  .header-actions{
+    display:flex; align-items:stretch;
+    border-radius:4px;
+    overflow:hidden;
+  }
   .call-btn{
     background:var(--brass);
     color:var(--green-deep);
     text-decoration:none;
-    padding:8px 14px;
-    border-radius:2px;
+    padding:10px 16px;
     font-size:13px;
     font-weight:600;
     white-space:nowrap;
+    display:flex; align-items:center;
   }
   .call-btn:hover{ background:var(--brass-light); }
-  .header-actions{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
   .whatsapp-btn{
     display:flex; align-items:center; gap:6px;
-    background:transparent;
-    border:1px solid #3E5348;
+    background:#1D3329;
     color:var(--paper);
     text-decoration:none;
-    padding:7px 12px;
-    border-radius:2px;
+    padding:10px 14px;
     font-size:13px;
     font-weight:600;
     white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,0.14);
   }
-  .whatsapp-btn:hover{ border-color:var(--brass-light); color:var(--brass-light); }
+  .whatsapp-btn:hover{ color:var(--brass-light); }
   .whatsapp-btn svg{ width:15px; height:15px; flex-shrink:0; }
   @media (min-width:420px){
-    .call-btn{ padding:9px 16px; font-size:14px; }
-    .whatsapp-btn{ padding:8px 14px; font-size:14px; }
+    .call-btn{ padding:11px 18px; font-size:14px; }
+    .whatsapp-btn{ padding:11px 16px; font-size:14px; }
     .whatsapp-btn svg{ width:16px; height:16px; }
   }
 
