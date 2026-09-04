@@ -201,12 +201,18 @@
   .entry{
     display:grid;
     grid-template-columns:52px 1fr;
-    gap:20px;
+    column-gap:20px;
     padding:26px 0;
     border-bottom:1px solid var(--line);
   }
+  .entry .idx{ grid-column:1; grid-row:1; }
+  .entry h3{ grid-column:2; grid-row:1; }
+  .entry p{ grid-column:2; grid-row:2; }
   @media (min-width:760px){
     .entry{ grid-template-columns:64px 220px 1fr; align-items:start; }
+    .entry .idx{ grid-row:auto; }
+    .entry h3{ grid-column:2; grid-row:auto; }
+    .entry p{ grid-column:3; grid-row:auto; }
   }
   .entry .idx{
     font-family:'Fraunces', serif;
@@ -458,7 +464,7 @@
           <span>
             <a href="https://www.google.com/maps/search/?api=1&query=Karnani+Archives+No+154+Pycrofts+Road+Bharathi+Salai+Royapettah+Chennai+600014" target="_blank" rel="noopener">Directions to Royapettah office</a>
             ·
-            <a href="https://www.google.com/maps/search/?api=1&query=Golf+Arcade+27%2F12+Veterinary+Hospital+Road+Nandanam+Chennai+600035" target="_blank" rel="noopener">Directions to Nandanam office</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Flat+No.5+Golf+Arcade+Door+No.27%2F12+Veterinary+Hospital+Road+Nandanam+Chennai+600035+Tamil+Nadu" target="_blank" rel="noopener">Directions to Nandanam office</a>
           </span>
         </div>
         <div class="detail-row">
