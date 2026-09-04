@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#182338;
-    --ink-soft:#48546A;
-    --paper:#F4F6F8;
-    --paper-2:#E7EBEF;
-    --green:#1E3A5F;
-    --green-deep:#122238;
-    --brass:#A9812E;
-    --brass-light:#C7A24E;
-    --line:#D7DCE2;
-    --white:#FFFFFF;
+    --ink:#1B2620;
+    --ink-soft:#3C463F;
+    --paper:#EDE7D8;
+    --paper-2:#E3DBC6;
+    --green:#204D3B;
+    --green-deep:#153529;
+    --brass:#A9822E;
+    --brass-light:#C9A24E;
+    --line:#C6BC9F;
+    --white:#FBF9F3;
     --max:1120px;
   }
   *{box-sizing:border-box;}
@@ -230,22 +230,30 @@
 
   /* ---------- Why us ---------- */
   .why{
-    background:var(--green-deep);
-    color:var(--paper);
+    background:var(--paper);
   }
-  .why .section-head{ border-color:#3A4B42; }
-  .why .section-head h2{ color:var(--white); }
-  .why .section-head .no{ color:var(--brass-light); }
   .why-grid{
-    display:grid; gap:32px;
+    display:grid; gap:24px;
     grid-template-columns:1fr;
   }
-  @media (min-width:700px){ .why-grid{ grid-template-columns:repeat(3,1fr); } }
-  .why-item .mark{
-    font-family:'Fraunces', serif; color:var(--brass-light); font-size:26px; margin-bottom:10px; display:block;
+  @media (min-width:600px){ .why-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:900px){ .why-grid{ grid-template-columns:repeat(3,1fr); } }
+  .why-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    padding:30px 26px;
+    text-align:center;
   }
-  .why-item h3{ color:var(--white); font-size:17px; font-weight:500; margin-bottom:8px;}
-  .why-item p{ color:#C4CCC6; font-size:14.5px; margin:0; }
+  .why-card .icon-badge{
+    width:56px; height:56px;
+    border-radius:50%;
+    background:var(--green-deep);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 18px;
+  }
+  .why-card .icon-badge svg{ width:26px; height:26px; stroke:var(--brass-light); }
+  .why-card h3{ font-size:17px; color:var(--ink); font-weight:600; margin-bottom:8px; }
+  .why-card p{ color:var(--ink-soft); font-size:14.5px; margin:0; line-height:1.5; }
 
   /* ---------- Contact ---------- */
   .contact-grid{
@@ -303,14 +311,32 @@
   footer{
     background:var(--green-deep);
     color:#9FAFA6;
-    padding:32px 0;
-    font-size:13px;
+    padding:52px 0 24px;
+    font-size:14px;
   }
-  .footer-row{
+  .footer-grid{
+    display:grid; gap:32px;
+    grid-template-columns:1fr;
+    padding-bottom:32px;
+    border-bottom:1px solid #2B3F35;
+  }
+  @media (min-width:700px){ .footer-grid{ grid-template-columns:1.4fr 1fr 1fr; } }
+  .footer-col h4{
+    color:var(--white); font-family:'Fraunces', serif; font-weight:500;
+    font-size:15px; margin-bottom:14px;
+  }
+  .footer-col p{ margin:0 0 14px; font-size:13.5px; line-height:1.6; }
+  .footer-col ul{ list-style:none; margin:0; padding:0; }
+  .footer-col li{ margin-bottom:9px; font-size:13.5px; }
+  footer a{ color:#C9A24E; text-decoration:none; }
+  footer a:hover{ color:var(--brass-light); }
+  .footer-bottom{
     display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
     align-items:center;
+    padding-top:20px;
+    font-size:12.5px;
+    color:#7D8F84;
   }
-  footer a{ color:#C9A24E; text-decoration:none; }
 
   /* ---------- Floating enquiry button ---------- */
   .float-enquiry{
@@ -426,18 +452,24 @@
       <h2>Why work with us</h2>
     </div>
     <div class="why-grid">
-      <div class="why-item">
-        <span class="mark">✓</span>
+      <div class="why-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+        </div>
         <h3>One point of contact</h3>
         <p>From the first consultation to the final registered document, you deal with the same team throughout.</p>
       </div>
-      <div class="why-item">
-        <span class="mark">✓</span>
+      <div class="why-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
         <h3>Local knowledge</h3>
         <p>Based in Royapettah, Chennai, with working familiarity of local Sub-Registrar offices and processes.</p>
       </div>
-      <div class="why-item">
-        <span class="mark">✓</span>
+      <div class="why-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
         <h3>Paperwork done properly</h3>
         <p>Documents are prepared carefully the first time, to avoid delays and rejections later.</p>
       </div>
@@ -531,9 +563,33 @@
 </section>
 
 <footer>
-  <div class="wrap footer-row">
-    <span>© <span id="year"></span> Karthipriya Associates, Chennai · D. Muthukrishnan</span>
-    <a href="tel:+919841097457">98410 97457</a>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Karthipriya Associates</h4>
+        <p>Property consultancy, registration and documentation services, based in Chennai. Guiding buyers, sellers and owners through every step of the paperwork.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#contact">Contact / Enquiry</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919841097457">98410 97457</a></li>
+          <li><a href="mailto:muthukrishnan531@gmail.com">muthukrishnan531@gmail.com</a></li>
+          <li><a href="https://wa.me/918939794546" target="_blank" rel="noopener">WhatsApp us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Karthipriya Associates, Chennai · D. Muthukrishnan</span>
+      <span>Property Consultants · Chennai</span>
+    </div>
   </div>
 </footer>
 
